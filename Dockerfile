@@ -1,4 +1,4 @@
-FROM php:7.0-fpm-alpine
+FROM php:7.1-fpm-alpine
 MAINTAINER shufo
 
 RUN apk --update add libmcrypt-dev && rm -rf /var/cache/apk/* && \
