@@ -1,7 +1,8 @@
 FROM php:7.1-fpm-alpine
 MAINTAINER shufo
 
-RUN apk --update add libmcrypt-dev && rm -rf /var/cache/apk/* && \
+RUN apk --update add libmcrypt-dev unzip zip zlib-dev && rm -rf /var/cache/apk/* && \
+    docker-php-ext-install zip && \
     docker-php-ext-install mbstring && \
     docker-php-ext-install mcrypt && \
     docker-php-ext-install pdo_mysql && \
