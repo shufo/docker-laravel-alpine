@@ -2,7 +2,7 @@ FROM php:7.3.7-fpm-alpine
 MAINTAINER shufo
 
 RUN apk --update --no-cache add curl libzip-dev libpng-dev openssl-dev \
-        autoconf make gcc g++ udev ttf-freefont \
+        autoconf make gcc g++ udev ttf-freefont git \
         yarn \ 
         chromium \
         chromium-chromedriver && \ 
