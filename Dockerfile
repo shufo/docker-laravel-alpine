@@ -8,7 +8,7 @@ ENV HOME /app
 ENV XDG_CONFIG_HOME /app
 
 RUN apk --update --no-cache add curl libzip-dev libpng-dev openssl-dev \
-        autoconf make gcc g++ udev ttf-freefont git graphviz \
+        autoconf make gcc g++ udev ttf-freefont git graphviz bash \
         yarn \ 
         chromium \
         chromium-chromedriver && \ 
