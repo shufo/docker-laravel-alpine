@@ -1,5 +1,6 @@
 FROM php:7.4.1-fpm-alpine
 
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN apk --update --no-cache add curl libzip-dev libpng-dev && rm -rf /var/cache/apk/* && \
     docker-php-ext-install pdo_mysql && \
     docker-php-ext-install bcmath && \
