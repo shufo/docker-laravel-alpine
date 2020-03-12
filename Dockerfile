@@ -6,6 +6,7 @@ WORKDIR /app
 
 RUN apk --update --no-cache add curl libzip-dev libpng-dev openssl-dev \
         autoconf make gcc g++ udev ttf-freefont git graphviz bash python automake \
+        nasm \
         yarn npm \ 
         chromium \
         chromium-chromedriver && \ 
