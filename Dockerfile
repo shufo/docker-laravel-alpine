@@ -22,6 +22,7 @@ RUN apk --update --no-cache add curl libzip-dev libpng-dev openssl-dev \
 ENV HOME /app
 ENV XDG_CONFIG_HOME /app
 ENV COMPOSER_HOME /composer
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN mkdir /composer && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \ 
     composer global require hirak/prestissimo && \
