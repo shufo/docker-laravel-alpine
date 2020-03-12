@@ -1,5 +1,4 @@
 FROM php:7.4.2-fpm-alpine
-MAINTAINER shufo
 
 RUN mkdir /app && chown www-data:www-data /app
 VOLUME /app
