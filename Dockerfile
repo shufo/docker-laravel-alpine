@@ -39,6 +39,10 @@ COPY --from=ext-mongodb /usr/local/lib/php/extensions/no-debug-non-zts-20190902/
 ENV EXT_REDIS_VERSION=5.2.1
 ENV EXT_IGBINARY_VERSION=3.1.2
 
+# set memory limit
+ENV PHP_MEMORY_LIMIT=2048M
+COPY php.ini-development /usr/local/etc/php/conf.d/php.ini
+
 RUN docker-php-source extract \
     # ext-opcache
     && docker-php-ext-enable opcache \
