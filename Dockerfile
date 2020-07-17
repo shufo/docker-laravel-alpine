@@ -59,7 +59,10 @@ RUN docker-php-source extract \
     && docker-php-ext-install sockets \
     ## cleanup
     && docker-php-source delete
-
+    
+# install pcov
+RUN pecl install pcov \
+    && echo extension=pcov.so > /usr/local/etc/php/conf.d/pcov.ini
 
 ENV HOME /app
 ENV XDG_CONFIG_HOME /app
