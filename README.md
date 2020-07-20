@@ -8,8 +8,12 @@ You can use these tags as php version.
 
 `-node-browsers` tagged image includes nodejs and chromium browser to test E2E by Laravel Dusk, puppeteer, Cypress, etc...
 
-- `7.4.3`, `latest`
-  - `7.4.3-node-browsers`, `node-browsers`
+- `7.4.8`, `latest`, `7.4.8-node-browsers`
+- `7.4.7`, `7.4.7-node-browsers`
+- `7.4.6`, `7.4.6-node-browsers`
+- `7.4.5`, `7.4.5-node-browsers`
+- `7.4.4`, `7.4.4-node-browsers`
+- `7.4.3-node-browsers`, `node-browsers`
 - `7.4.2`, `7.4.2-node-browsers`
 - `7.4.1`, `7.4.1-node-browsers`
 - `7.3.11`, `7.3.11-node-browsers`
