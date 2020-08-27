@@ -3,6 +3,7 @@ FROM php:7.4.9-fpm-alpine AS ext-mongodb
 ENV EXT_MONGODB_VERSION=1.7.4
 
 RUN docker-php-source extract \
+    && apk upgrade -U -a \
     && apk add --update git \
     && git clone --branch $EXT_MONGODB_VERSION --depth 1 https://github.com/mongodb/mongo-php-driver.git /usr/src/php/ext/mongodb \
     && cd /usr/src/php/ext/mongodb && git submodule update --init \
@@ -15,7 +16,11 @@ VOLUME /app
 WORKDIR /app
 
 # packages
-RUN apk --update --no-cache add curl libzip-dev libpng-dev openssl-dev \
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
+    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+    apk upgrade -U -a  && \
+    apk --update --no-cache add curl libzip-dev libpng-dev openssl-dev \
         autoconf make gcc g++ udev ttf-freefont git graphviz bash zsh automake \
         nasm \
         yarn npm \
