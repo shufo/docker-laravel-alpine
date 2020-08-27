@@ -1,4 +1,4 @@
-FROM php:7.4.8-fpm-alpine AS ext-mongodb
+FROM php:7.4.9-fpm-alpine AS ext-mongodb
 
 ENV EXT_MONGODB_VERSION=1.7.4
 
@@ -8,7 +8,7 @@ RUN docker-php-source extract \
     && cd /usr/src/php/ext/mongodb && git submodule update --init \
     && docker-php-ext-install mongodb
 
-FROM php:7.4.8-fpm-alpine
+FROM php:7.4.9-fpm-alpine
 
 RUN mkdir /app && chown www-data:www-data /app
 VOLUME /app
