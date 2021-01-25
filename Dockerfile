@@ -1,14 +1,3 @@
-FROM php:7.4.12-fpm-alpine AS ext-mongodb
-
-ENV EXT_MONGODB_VERSION=1.7.4
-
-RUN docker-php-source extract \
-    && apk upgrade -U -a \
-    && apk add --update git \
-    && git clone --branch $EXT_MONGODB_VERSION --depth 1 https://github.com/mongodb/mongo-php-driver.git /usr/src/php/ext/mongodb \
-    && cd /usr/src/php/ext/mongodb && git submodule update --init \
-    && docker-php-ext-install mongodb
-
 FROM php:7.4.12-fpm-alpine
 
 RUN mkdir /app && chown www-data:www-data /app
@@ -39,10 +28,6 @@ RUN docker-php-ext-install pdo_mysql \
                            zip  \
                            opcache \
                            gd 
-
-# ext-mongodb
-COPY --from=ext-mongodb /usr/local/etc/php/conf.d/docker-php-ext-mongodb.ini /usr/local/etc/php/conf.d/docker-php-ext-mongodb.ini
-COPY --from=ext-mongodb /usr/local/lib/php/extensions/no-debug-non-zts-20190902/mongodb.so /usr/local/lib/php/extensions/no-debug-non-zts-20190902/mongodb.so
 
 ENV EXT_REDIS_VERSION=5.2.1
 ENV EXT_IGBINARY_VERSION=3.1.2
