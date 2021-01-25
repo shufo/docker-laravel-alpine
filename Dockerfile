@@ -1,7 +1,7 @@
 FROM php:7.4.13-fpm-alpine
 
-ENV EXT_IGBINARY_VERSION=3.1.2
 ENV EXT_REDIS_VERSION=5.3.2
+ENV EXT_IGBINARY_VERSION=3.2.1
 
 # php extensions
 RUN docker-php-ext-install pdo_mysql
