@@ -1,7 +1,7 @@
 FROM php:7.4.11-fpm-alpine
 
-ENV EXT_REDIS_VERSION=5.2.1
-ENV EXT_IGBINARY_VERSION=3.1.2
+ENV EXT_REDIS_VERSION=5.3.2
+ENV EXT_IGBINARY_VERSION=3.2.1
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN apk --update --no-cache add curl libzip-dev libpng-dev && rm -rf /var/cache/apk/* && \
