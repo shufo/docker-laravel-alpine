@@ -81,5 +81,4 @@ ENV COMPOSER_HOME /composer
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN mkdir /composer && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \ 
-    composer global require hirak/prestissimo && \
     chmod -fR 777 /composer
