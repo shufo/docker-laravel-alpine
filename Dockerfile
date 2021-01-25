@@ -9,7 +9,7 @@ RUN docker-php-source extract \
     && cd /usr/src/php/ext/mongodb && git submodule update --init \
     && docker-php-ext-install mongodb
 
-FROM php:7.4.9-fpm-alpine
+FROM php:7.4.12-fpm-alpine
 
 RUN mkdir /app && chown www-data:www-data /app
 VOLUME /app
