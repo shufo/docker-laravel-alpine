@@ -28,5 +28,4 @@ RUN apk --update --no-cache add curl libzip-dev libpng-dev && rm -rf /var/cache/
     ## cleanup
     docker-php-source delete && \ 
     # composer
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \ 
-    composer global require hirak/prestissimo
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
