@@ -1,4 +1,4 @@
-FROM php:8.0.1-fpm-alpine
+FROM php:8.0.2-fpm-alpine
 
 ENV EXT_REDIS_VERSION=5.3.2
 ENV EXT_IGBINARY_VERSION=3.2.1
