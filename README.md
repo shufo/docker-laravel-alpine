@@ -1,6 +1,6 @@
 # docker-laravel-alpine
 
-This repository contains a Dockerfile for create Laravel 5.x, 6.x* ready image bundled with Composer and [hirak/prestissimo](https://github.com/hirak/prestissimo).
+This repository contains a Dockerfile for create Laravel 5.x, 6.x\* ready image bundled with Composer and [hirak/prestissimo](https://github.com/hirak/prestissimo).
 
 DockerHub repository is [here](https://hub.docker.com/r/shufo/laravel-alpine/).
 
@@ -8,7 +8,8 @@ You can use these tags as php version.
 
 `-node-browsers` tagged image includes nodejs and chromium browser to test E2E by Laravel Dusk, puppeteer, Cypress, etc...
 
-- `7.4.8`, `latest`, `7.4.8-node-browsers`
+- `8.0.1`, `latest`,
+- `7.4.8`, `7.4.8-node-browsers`
 - `7.4.7`, `7.4.7-node-browsers`
 - `7.4.6`, `7.4.6-node-browsers`
 - `7.4.5`, `7.4.5-node-browsers`
