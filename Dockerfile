@@ -26,7 +26,7 @@ RUN docker-php-ext-install pdo_mysql \
                            opcache \
                            gd 
 
-ENV EXT_REDIS_VERSION=5.3.2
+ENV EXT_REDIS_VERSION=5.3.4
 
 # set default environment variables
 ENV PHP_MEMORY_LIMIT=2048M
