@@ -1,6 +1,6 @@
 # docker-laravel-alpine
 
-This repository contains a Dockerfile for create Laravel 5.x, 6.x\* ready image bundled with Composer and [hirak/prestissimo](https://github.com/hirak/prestissimo).
+This repository contains a Dockerfile for create Laravel 5.x, 6.x\*, 7.x, 8.x ready image bundled with Composer and [hirak/prestissimo](https://github.com/hirak/prestissimo).
 
 DockerHub repository is [here](https://hub.docker.com/r/shufo/laravel-alpine/).
 
