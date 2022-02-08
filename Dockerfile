@@ -18,13 +18,15 @@ RUN apk upgrade -U -a  && \
 # install ohmyzsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+ENV CFLAGS="$CFLAGS -D_GNU_SOURCE" 
 
 # php extensions
 RUN docker-php-ext-install pdo_mysql \
                            bcmath \
                            zip  \
                            opcache \
-                           gd 
+                           gd \
+                           sockets
 
 ENV EXT_REDIS_VERSION=5.3.4
 
@@ -43,8 +45,6 @@ RUN docker-php-source extract \
     && curl -fsSL https://github.com/phpredis/phpredis/archive/$EXT_REDIS_VERSION.tar.gz | tar xvz -C /usr/src/php/ext/redis --strip 1 \
     && docker-php-ext-configure redis \
     && docker-php-ext-install redis \
-    # ext-sockets
-    && docker-php-ext-install sockets \
     ## cleanup
     && docker-php-source delete
     
