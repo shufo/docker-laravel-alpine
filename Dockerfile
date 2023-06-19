@@ -6,7 +6,7 @@ WORKDIR /app
 
 # packages
 RUN apk upgrade -U -a  && \
-    apk --update --no-cache add curl libzip-dev libpng-dev openssl-dev \
+    apk --update --no-cache add linux-headers curl libzip-dev libpng-dev openssl-dev \
         autoconf make gcc g++ udev ttf-freefont git graphviz bash zsh automake jq \
         nasm \
         yarn npm \
