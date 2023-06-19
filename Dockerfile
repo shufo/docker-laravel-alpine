@@ -5,7 +5,7 @@ ENV EXT_IGBINARY_VERSION=3.2.5
 ENV CFLAGS="$CFLAGS -D_GNU_SOURCE" 
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
-RUN apk --update --no-cache add curl libzip-dev libpng-dev && rm -rf /var/cache/apk/* && \
+RUN apk --update --no-cache add linux-headers curl libzip-dev libpng-dev && rm -rf /var/cache/apk/* && \
     # php extensions
     docker-php-ext-install pdo_mysql \
     											 bcmath \
