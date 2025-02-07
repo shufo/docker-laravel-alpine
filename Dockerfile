@@ -28,7 +28,7 @@ RUN docker-php-ext-install pdo_mysql \
                            gd \
                            sockets
 
-ENV EXT_REDIS_VERSION=5.3.7
+ENV EXT_REDIS_VERSION=6.1.0
 
 # set default environment variables
 ENV PHP_MEMORY_LIMIT=2048M
