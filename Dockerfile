@@ -1,7 +1,7 @@
 FROM php:8.3.15-fpm-alpine
 
-ENV EXT_REDIS_VERSION=5.3.6
 ENV EXT_IGBINARY_VERSION=3.2.5
+ENV EXT_REDIS_VERSION=6.1.0
 ENV CFLAGS="$CFLAGS -D_GNU_SOURCE" 
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
