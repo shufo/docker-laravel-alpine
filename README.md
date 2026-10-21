@@ -13,6 +13,7 @@ You can use these tags as php version.
 - `8.4.3`, `8.4.3-node-browsers`
 - `8.3.36`, `8.3.36-node-browsers`
 - `8.3.15`, `8.3.15-node-browsers`
+- `8.2.35`, `8.2.35-node-browsers`
 - `8.2.7`, `8.2.7-node-browsers`
 - `8.1.8`, `8.1.8-node-browsers`
 - `8.1.7`, `8.1.7-node-browsers`
