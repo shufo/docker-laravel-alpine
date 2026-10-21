@@ -1,4 +1,4 @@
-FROM php:8.3.15-fpm-alpine
+FROM php:8.3.36-fpm-alpine
 
 RUN mkdir /app && chown www-data:www-data /app
 VOLUME /app
