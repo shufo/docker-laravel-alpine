@@ -24,7 +24,6 @@ ENV CFLAGS="$CFLAGS -D_GNU_SOURCE"
 RUN docker-php-ext-install pdo_mysql \
                            bcmath \
                            zip  \
-                           opcache \
                            gd \
                            sockets
 
@@ -38,8 +37,6 @@ ENV PHP_POST_MAX_SIZE=100M
 COPY php.ini-development /usr/local/etc/php/conf.d/php.ini
 
 RUN docker-php-source extract \
-    # ext-opcache
-    && docker-php-ext-enable opcache \
     # ext-redis
     && mkdir -p /usr/src/php/ext/redis \
     && curl -fsSL https://github.com/phpredis/phpredis/archive/$EXT_REDIS_VERSION.tar.gz | tar xvz -C /usr/src/php/ext/redis --strip 1 \
